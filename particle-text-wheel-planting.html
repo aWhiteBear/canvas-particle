@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body style="text-align: center">
+        <canvas id="canvasText" width="1600" height="500"></canvas>
+        <script type="module">
+            import { DrawText } from './js/canvas-particle-text.js';
+            new DrawText('canvasText',new Date().toLocaleString(),3);
+            setInterval(()=>{
+                new DrawText('canvasText',new Date().toLocaleString(),3);
+            },5000)
+        </script>
+
+    </body>
+</html>
